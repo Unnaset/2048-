@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 益智游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2048</h1>
+            <div class="score-container">
+                <div class="score-box">
+                    <span class="score-label">分数</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-box">
+                    <span class="score-label">最高分</span>
+                    <span id="best-score">0</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="game-info">
+            <p>使用方向键或滑动来移动方块，相同数字的方块会合并！</p>
+            <button id="new-game-btn">新游戏</button>
+        </div>
+        
+        <div class="game-container">
+            <div class="game-board" id="game-board">
+                <!-- 游戏方块将通过JavaScript动态生成 -->
+            </div>
+        </div>
+        
+        <div class="game-over" id="game-over" style="display: none;">
+            <div class="game-over-content">
+                <h2>游戏结束！</h2>
+                <p>最终分数: <span id="final-score">0</span></p>
+                <button id="restart-btn">重新开始</button>
+            </div>
+        </div>
+        
+        <div class="win-message" id="win-message" style="display: none;">
+            <div class="win-content">
+                <h2>恭喜！你赢了！</h2>
+                <p>你成功达到了2048！</p>
+                <button id="continue-btn">继续游戏</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
